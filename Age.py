@@ -1,5 +1,5 @@
 age=int(input('What is your age?'))
-if age>=25:
+if age>=16:
     print('Congrats!!')
 else:
   print('You are too young come back when you are old enough!')
