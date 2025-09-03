@@ -25,7 +25,7 @@ try:
 
     final_price = calculate_discounted_price(original_price, discount_rate)
 
-    print(f"\n--- Receipt ---")
+    print("\n--- Receipt ---")
     print(f"Original Price: £{original_price:.2f}")
     print(f"Discount Rate: {discount_rate}%")
     print(f"Final Price: £{final_price:.2f}")
