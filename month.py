@@ -3,7 +3,7 @@
 # Subroutine to validate month
 def VaildMonth(Month):
     if Month > 0 and Month < 13:
-        print("Vaild month!")
+        print("Valid month!")
     else:
         print("Invalid!")
 

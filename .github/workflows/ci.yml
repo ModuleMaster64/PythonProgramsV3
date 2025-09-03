@@ -1,0 +1,24 @@
+# https://docs.astral.sh/ruff
+name: ci
+on:
+  push:
+    # branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  codespell:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - run: pipx run codespell
+  ruff_check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - run: pipx run ruff check --output-format=github
+  ruff_format:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - run: pipx run ruff format
