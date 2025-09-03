@@ -1,23 +1,20 @@
-country = Spain
+country = "Spain"
 
-print ('In this program you will need to guess the country I am thinking of')
+print("In this program you will need to guess the country I am thinking of")
+print("I am thinking of a country between London and Japan")
 
-print ('I am thinking of a country between London and Japan')
+while True:
+    guess = input("Enter your guess: ")
 
-while country == Spain:
+    if guess == "UK":
+        print("That's not right :(")
 
-    guess = input()
+    elif guess == "Poland":
+        print("That's not right :(")
 
-    guess = int(guess)
-
-    if guess UK
-        print ('Thats not right :(')
-
-
-    if guess Poland
-        print ('Thats not right :(')
-
-    if guess == Spain:
-        print('Your guess is correct!!')
-
+    elif guess == "Spain":
+        print("Your guess is correct!!")
         break
+
+    else:
+        print("Interesting guess, but not quite!")
