@@ -6,7 +6,7 @@ def MathsDemo(X, Y):
     DivisionResult = X / Y
     print("{} divided by {} is {}".format(X, Y, DivisionResult))
     IntDivisionResult = X // Y
-    print("{} interger divison by {} is {}".format(X, Y, IntDivisionResult))
+    print("{} integer division by {} is {}".format(X, Y, IntDivisionResult))
     ModResult = X % Y
     print("{} modulus {} is {}".format(X, Y, ModResult))
     ExpResult = X ** Y
