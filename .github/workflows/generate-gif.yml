@@ -18,8 +18,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install gifos from GitHub
-        run: pip install git+https://github.com/gifos/gifos.git
+      - name: Install gifos from GitHub (with auth)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: pip install git+https://${GH_PAT}@github.com/gifos/gifos.git
 
       - name: Run GIF generator
         run: python generate_gif.py
