@@ -25,10 +25,19 @@ jobs:
     - name: Generate GIF
       run: python generate_gif.py
 
+    - name: List files in assets
+      run: ls -l assets
+
     - name: Commit GIF to repo
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add assets/pythonprograms.gif
-        git commit -m "Update terminal GIF"
-        git push
+
+        if [ -f assets/pythonprograms.gif ]; then
+          echo "✅ GIF found. Committing to repo..."
+          git add assets/pythonprograms.gif
+          git commit -m "Update terminal GIF"
+          git push
+        else
+          echo "❌ GIF not found. Skipping commit."
+        fi
