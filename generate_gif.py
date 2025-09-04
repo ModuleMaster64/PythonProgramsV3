@@ -33,7 +33,7 @@ type_line("[4] 🔞 Age Checker", 16)
 type_line("[5] 🔐 Password Generator", 17)
 t.gen_text("", row_num=18)
 
-# Blinking cursor illusion (static underscore)
+# Blinking cursor illusion
 type_line("> Enter your choice: _", 19)
 
 # Generate GIF
