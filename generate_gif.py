@@ -1,6 +1,7 @@
 import gifos
 import time
 import os
+import shutil
 
 # Ensure assets folder exists
 os.makedirs("assets", exist_ok=True)
@@ -46,8 +47,9 @@ try:
     t.gen_text("", row_num=20)
 
     # Generate GIF
-    t.gen_gif("assets/pythonprograms.gif")
-    print("✅ GIF generated successfully.")
+    t.gen_gif()  # No arguments — uses default filename
+    shutil.move("terminal.gif", "assets/pythonprograms.gif")
+    print("✅ GIF generated successfully and moved to assets/pythonprograms.gif.")
 
 except Exception as e:
     import traceback
