@@ -18,8 +18,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install gifos
+      - name: Install gifos from GitHub
+        run: pip install git+https://github.com/gifos/gifos.git
 
       - name: Run GIF generator
         run: python generate_gif.py
