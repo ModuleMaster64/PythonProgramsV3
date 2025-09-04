@@ -16,8 +16,8 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install dependencies
-      run: pip install -r requirements.txt
+    - name: Install gifos from GitHub
+      run: pip install git+https://github.com/x0rzavi/github-readme-terminal.git
 
     - name: Install FFmpeg
       run: sudo apt-get install ffmpeg
