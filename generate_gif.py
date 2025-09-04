@@ -48,7 +48,7 @@ try:
 
     # Generate GIF
     t.gen_gif()  # No arguments — uses default filename
-    shutil.move("terminal.gif", "assets/pythonprograms.gif")
+    shutil.move("output.gif", "assets/pythonprograms.gif")
     print("✅ GIF generated successfully and moved to assets/pythonprograms.gif.")
 
 except Exception as e:
