@@ -1,7 +1,7 @@
 import gifos
 import time
 
-t = gifos.Terminal(width=480, height=300, font_size=14)
+t = gifos.Terminal(width=480, height=300, font_size=14, xpad=10, ypad=10)
 
 # Simulated typing with delays
 def type_line(text, row, delay=0.04):
