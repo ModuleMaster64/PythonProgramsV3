@@ -19,7 +19,7 @@ try:
     type_line("[*] Booting PythonProgramsV3 OS...", 1)
     type_line("[~] PY-V3 Kernel v1.0.3 initializing...", 2)
     type_line("[>] Performing system checks...", 3)
-    type_line("[██████████] 100%", 4)
+    type_line("[==========] 100%", 4)
     type_line("[OK] Modules verified", 5)
     type_line("[AUTH] Authenticating user: ModuleMaster64", 6)
     type_line("[ACCESS GRANTED]", 7)
