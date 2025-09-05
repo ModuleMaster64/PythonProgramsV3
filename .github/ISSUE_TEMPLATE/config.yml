@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Ask a question or start a discussion
+    url: https://github.com/ModuleMaster64/PythonProgramsV3/discussions
+    about: Use Discussions for questions, ideas, or general feedback.
+
+issue_templates:
+  - name: ✨ Feature request
+    description: Suggest an idea to improve this project.
+    labels: [enhancement]
+    file: feature_request.yml
