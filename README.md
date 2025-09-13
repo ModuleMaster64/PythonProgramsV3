@@ -15,5 +15,5 @@ This is the upgraded version of V1 (which is deleted) of PythonPrograms!
 
 
 
-![Boot-Up Animation](assets/terminal_slow.gif)
+![Boot-Up Animation](assets/terminal.gif)
 
