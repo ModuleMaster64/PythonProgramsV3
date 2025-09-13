@@ -5,7 +5,7 @@ timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 t = gifos.Terminal(width=320, height=240, xpad=5, ypad=5)
 
 t.gen_text(text="Booting PythonProgramsV3 OS...", row_num=1)
-t.gen_text(text="Created by ModuleMaster64 🧠", row_num=2)
+t.gen_text(text="Created by ModuleMaster64", row_num=2)
 
 t.gen_text(text="> Initializing modules", row_num=4)
 t.gen_text(text="> Loading plugins", row_num=5)
