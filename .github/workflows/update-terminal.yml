@@ -1,0 +1,32 @@
+name: 🖥️ Update Terminal GIF
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  generate-gif:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install dependencies
+      run: pip install github-readme-terminal
+
+    - name: 🖼️ Generate terminal GIF
+      run: python scripts/generate_gif.py
+
+    - name: 📝 Commit updated GIF
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add assets/terminal.gif
+        git commit -m "🖥️ Auto-update terminal-style GIF"
+        git push
