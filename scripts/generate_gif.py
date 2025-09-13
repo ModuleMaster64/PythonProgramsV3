@@ -17,5 +17,4 @@ for i in range(12):
     t.gen_text(text=f"> Finalizing startup... {frame}", row_num=7 + i)
 
 t.gen_text(text=f"System ready @ {timestamp}", row_num=20)
-t.gen_gif("assets/terminal.gif", frame_duration=0.2)
-
+t.gen_gif("assets/terminal.gif")  # No frame_duration here
