@@ -85,7 +85,7 @@ time.sleep(1)
 t.gen_text(text=f"System ready @ {timestamp}", row_num=login_row + 4)
 
 # Generate GIF
-t.gen_gif()
+t.gen_gif(delay=1250)
 
 # Save to assets folder
 os.makedirs("assets", exist_ok=True)
