@@ -13,52 +13,52 @@ build_id = datetime.utcnow().strftime('%Y%m%d%H%M%S')
 t = gifos.Terminal(width=320, height=240, xpad=5, ypad=5)
 
 # Boot-up sequence
-t.gen_text(text="Booting PythonProgramsV3 OS...", row_num=1)
-time.sleep(0.15)
+boot_messages = [
+    "Booting PythonProgramsV3 OS...",
+    "Created by ModuleMaster64",
+    f"Version: {version} | Build: {build_id}",
+    "> Initializing modules",
+    "> Loading plugins",
+    "> Starting shell interface",
+    "> Checking system integrity",
+    "> Mounting virtual drives",
+    "> Verifying dependencies",
+    "> Establishing network link"
+]
 
-t.gen_text(text="Created by ModuleMaster64", row_num=2)
-time.sleep(0.15)
+for i, msg in enumerate(boot_messages, start=1):
+    t.gen_text(text=msg, row_num=i)
+    time.sleep(0.2)
 
-t.gen_text(text=f"Version: {version} | Build: {build_id}", row_num=3)
-time.sleep(0.15)
-
-t.gen_text(text="> Initializing modules", row_num=4)
-time.sleep(0.15)
-
-t.gen_text(text="> Loading plugins", row_num=5)
-time.sleep(0.15)
-
-t.gen_text(text="> Starting shell interface", row_num=6)
-time.sleep(0.15)
-
-# Spinner animation
+# Spinner animation (100 frames × 0.15s = ~15s)
 spinner = ["|", "/", "-", "\\"]
-for i in range(12):
+for i in range(100):
     frame = spinner[i % len(spinner)]
     dots = "." * (i % 4)
-    t.gen_text(text=f"> Finalizing startup{dots} {frame}", row_num=7)
+    t.gen_text(text=f"> Finalizing startup{dots} {frame}", row_num=len(boot_messages) + 1)
     time.sleep(0.15)
 
 # Simulated login sequence
-t.gen_text(text="Login: ModuleMaster64", row_num=8)
-time.sleep(0.15)
+login_row = len(boot_messages) + 2
+t.gen_text(text="Login: ModuleMaster64", row_num=login_row)
+time.sleep(0.2)
 
-t.gen_text(text="Password: **************", row_num=9)
-time.sleep(0.1)
+t.gen_text(text="Password: **************", row_num=login_row + 1)
+time.sleep(0.2)
 
 auth_frames = ["Authenticating.", "Authenticating..", "Authenticating..."]
 for frame in auth_frames:
-    t.gen_text(text=frame, row_num=10)
-    time.sleep(0.15)
+    t.gen_text(text=frame, row_num=login_row + 2)
+    time.sleep(0.2)
 
-t.gen_text(text="Access granted!", row_num=11)
-time.sleep(0.15)
+t.gen_text(text="Access granted!", row_num=login_row + 3)
+time.sleep(0.2)
 
-t.gen_text(text=f"System ready @ {timestamp}", row_num=12)
+t.gen_text(text=f"System ready @ {timestamp}", row_num=login_row + 4)
 
-# Generate GIF (default output: output.gif)
+# Generate GIF
 t.gen_gif()
 
-# Move to assets folder with correct name
+# Save to assets folder
 os.makedirs("assets", exist_ok=True)
 shutil.move("output.gif", "assets/terminal.gif")
