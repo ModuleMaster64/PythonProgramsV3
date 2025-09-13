@@ -15,4 +15,5 @@ This is the upgraded version of V1 (which is deleted) of PythonPrograms!
 
 
 
-![PythonProgramsV3 OS Boot](assets/terminal.gif)
+![Boot-Up Animation](assets/terminal_slow.gif)
+
