@@ -51,7 +51,7 @@ for frame in auth_frames:
     t.gen_text(text=frame, row_num=10)
     time.sleep(0.3)
 
-t.gen_text(text="Access granted ✅", row_num=11)
+t.gen_text(text="Access granted!", row_num=11)
 time.sleep(0.3)
 
 t.gen_text(text=f"System ready @ {timestamp}", row_num=12)
