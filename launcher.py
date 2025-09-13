@@ -1,5 +1,6 @@
-import os, subprocess, time
-from datetime import datetime
+import os
+import subprocess
+import time
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -11,7 +12,7 @@ def login():
     console.print("[bold yellow]Welcome to PythonProgramsV3 OS[/bold yellow]")
     username = input("Username: ")
     password = input("Password: ")
-    if username == "beau" and password == "v3rocks":
+    if username == "M0DuleMaster64" and password == "v6rocks":
         console.print("[green]Access granted.[/green]\n")
         return True
     else:
