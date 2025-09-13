@@ -28,7 +28,7 @@ def discover_plugins():
     return plugins
 
 def show_banner():
-    console.print(Panel(f"🖥️ [bold cyan]PythonProgramsV3 OS[/bold cyan]\nCreated by [bold magenta]ModuleMaster64[/bold magenta]", expand=False))
+    console.print(Panel("🖥️ [bold cyan]PythonProgramsV3 OS[/bold cyan]\nCreated by [bold magenta]ModuleMaster64[/bold magenta]", expand=False))
 
 def show_plugins_table(plugins):
     table = Table(title="Available Plugins")
