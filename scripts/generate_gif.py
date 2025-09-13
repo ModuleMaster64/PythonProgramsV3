@@ -12,11 +12,6 @@ build_id = datetime.utcnow().strftime('%Y%m%d%H%M%S')
 # Create terminal canvas
 t = gifos.Terminal(width=320, height=240, xpad=5, ypad=5)
 
-# Helper function to simulate delay by repeating frames
-def pad_frame(text, row_num, repeats=12):  # ~1.2s if ~100ms per frame
-    for _ in range(repeats):
-        t.gen_text(text=text, row_num=row_num)
-
 # Boot-up sequence
 pad_frame("Booting PythonProgramsV3 OS...", row_num=1)
 pad_frame("Created by ModuleMaster64", row_num=2)
@@ -53,7 +48,7 @@ for frame in auth_frames:
 
 pad_frame("Access granted!", row_num=login_row + 3)
 pad_frame(f"System ready @ {timestamp}", row_num=login_row + 4)
-pad_frame("Welcome, Beau", row_num=login_row + 5)
+pad_frame("Welcome, ModuleMaster64", row_num=login_row + 5)
 
 # Blinking cursor effect
 cursor_row = login_row + 6
