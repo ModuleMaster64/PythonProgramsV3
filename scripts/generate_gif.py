@@ -2,6 +2,7 @@ import gifos
 from datetime import datetime
 import os
 import shutil
+from PIL import Image, ImageSequence
 
 # Timestamp and version info
 timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
@@ -66,3 +67,15 @@ t.gen_gif()
 # Save to assets folder
 os.makedirs("assets", exist_ok=True)
 shutil.move("output.gif", "assets/terminal.gif")
+
+# Post-process with Pillow to slow down playback
+original = Image.open("assets/terminal.gif")
+frames = [frame.copy() for frame in ImageSequence.Iterator(original)]
+
+frames[0].save(
+    "assets/terminal_slow.gif",
+    save_all=True,
+    append_images=frames[1:],
+    duration=1250,  # 1.25 seconds per frame
+    loop=0
+)
