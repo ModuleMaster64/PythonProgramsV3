@@ -15,3 +15,16 @@ This is the upgraded version of V1 (which is deleted) of PythonPrograms!
 
 
 
+![PythonProgramsV3 OS Boot](assets/terminal.gif)
+
+Welcome to **PythonProgramsV3 OS** — a retro terminal experience powered by Python.
+
+🧠 Created by ModuleMaster64  
+🔐 Login system  
+🧩 Plugin loader  
+🎨 Rich UI  
+🧪 System diagnostics  
+🎮 Games & utilities  
+🌀 Boot-up animation  
+
+
