@@ -33,32 +33,32 @@ boot_messages = [
 
 for i, msg in enumerate(boot_messages, start=1):
     t.gen_text(text=msg, row_num=i)
-    time.sleep(0.5)
+    time.sleep(1)
 
-# Spinner animation (45 frames × 0.5s = ~22.5s)
+# Spinner animation (22 frames × 1s = ~22s)
 spinner = ["|", "/", "-", "\\"]
 spinner_row = len(boot_messages) + 1
-for i in range(45):
+for i in range(22):
     frame = spinner[i % len(spinner)]
     dots = "." * (i % 4)
     t.gen_text(text=f"> Finalizing startup{dots} {frame}", row_num=spinner_row)
-    time.sleep(0.5)
+    time.sleep(1)
 
 # Simulated login sequence
 login_row = spinner_row + 1
 t.gen_text(text="Login: ModuleMaster64", row_num=login_row)
-time.sleep(0.5)
+time.sleep(1)
 
 t.gen_text(text="Password: **************", row_num=login_row + 1)
-time.sleep(0.5)
+time.sleep(1)
 
 auth_frames = ["Authenticating.", "Authenticating..", "Authenticating..."]
 for frame in auth_frames:
     t.gen_text(text=frame, row_num=login_row + 2)
-    time.sleep(0.5)
+    time.sleep(1)
 
 t.gen_text(text="Access granted!", row_num=login_row + 3)
-time.sleep(0.5)
+time.sleep(1)
 
 t.gen_text(text=f"System ready @ {timestamp}", row_num=login_row + 4)
 
