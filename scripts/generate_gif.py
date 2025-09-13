@@ -59,7 +59,7 @@ time.sleep(1.25)
 
 # Spinner animation (22 frames × 1s = ~22s)
 spinner = ["|", "/", "-", "\\"]
-spinner_row = len(boot_messages) + 1
+spinner_row = 16
 for i in range(22):
     frame = spinner[i % len(spinner)]
     dots = "." * (i % 4)
