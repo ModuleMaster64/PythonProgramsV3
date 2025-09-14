@@ -112,7 +112,7 @@ def play_quiz():
                                     |___/ 
     """)
     loading_screen()
-    print("Welcome to Terminal Quiz Showdown!")
+    print("Welcome to Terminal Quiz Showdown! Created by ModuleMaster64")
     rounds = 5
     for _ in range(rounds):
         category = choose_category()
