@@ -12,8 +12,3 @@ This is the upgraded version of V1 (which is deleted) of PythonPrograms!
 
 - [ModuleMaster64](https://github.com/ModuleMaster64) — Creator & Maintainer  
 - [cclauss](https://github.com/cclauss) — Python wizardry & linting expertise
-
-
-
-![Boot-Up Animation](assets/terminal.gif)
-
