@@ -1,9 +1,9 @@
 name: Pycheck Agent Scan
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:     # Manual trigger from GitHub UI
   schedule:
-    - cron: '0 9 * * 1'  # Every Monday at 09:00 UTC
+    - cron: '0 9 * * 1'   # Every Monday at 09:00 UTC
 
 jobs:
   pycheck-scan:
@@ -24,4 +24,4 @@ jobs:
     - name: Run Pycheck Agent (safe mode)
       run: |
         echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
-        python -m healing_agent.agent run ./system/executingSystemCommands.py --no-fix
+        python -c "from healing_agent.agent import main; main(['run', './system/executingSystemCommands.py', '--no-fix'])"
