@@ -15,6 +15,7 @@ jobs:
 
     - name: Clone Pycheck Agent
       run: git clone https://github.com/matebenyovszky/healing-agent.git
+      working-directory: ${{ github.workspace }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -25,3 +26,4 @@ jobs:
       run: |
         echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
         python healing-agent/agent.py run ./system/executingSystemCommands.py --no-fix
+      working-directory: ${{ github.workspace }}
