@@ -21,9 +21,6 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install dependencies
-      run: pip install -r healing-agent/requirements.txt
-
     - name: Run Pycheck Agent (safe mode)
       run: |
         echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
