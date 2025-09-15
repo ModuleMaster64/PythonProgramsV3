@@ -1,0 +1,27 @@
+name: Pycheck Agent Scan
+
+on:
+  workflow_dispatch:     # Manual trigger
+  schedule:
+    - cron: '0 9 * * 1'   # Every Monday at 09:00 UTC
+
+jobs:
+  pycheck-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install Pycheck Agent
+      run: pip install pycheck-agent
+
+    - name: Run Pycheck Agent (safe mode)
+      run: |
+        echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
+        pycheck-agent run ./system/executingSystemCommands.py --no-fix
