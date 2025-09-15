@@ -1,0 +1,24 @@
+name: Weekly Security Scan
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 09:00 UTC
+  workflow_dispatch:     # Allows manual triggering too
+
+jobs:
+  bandit-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install Bandit
+      run: pip install bandit
+
+    - name: Run Bandit
+      run: bandit -r .
