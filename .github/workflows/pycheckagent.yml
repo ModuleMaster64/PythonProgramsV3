@@ -1,27 +1,30 @@
 name: Pycheck Agent Scan
 
 on:
-  workflow_dispatch:     # Manual trigger from GitHub UI
+  workflow_dispatch:
   schedule:
-    - cron: '0 9 * * 1'   # Every Monday at 09:00 UTC
+    - cron: '0 9 * * 1'  # Every Monday at 09:00 UTC
 
 jobs:
   pycheck-scan:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout your repo
       uses: actions/checkout@v3
+
+    - name: Clone Pycheck Agent
+      run: git clone https://github.com/matebenyovszky/healing-agent.git
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
 
-    - name: Install Pycheck Agent from GitHub
-      run: pip install git+https://github.com/matebenyovszky/healing-agent.git
+    - name: Install dependencies
+      run: pip install -r healing-agent/requirements.txt
 
     - name: Run Pycheck Agent (safe mode)
       run: |
         echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
-        python -c "from healing_agent.agent import main; main(['run', './system/executingSystemCommands.py', '--no-fix'])"
+        python healing-agent/agent.py run ./system/executingSystemCommands.py --no-fix
