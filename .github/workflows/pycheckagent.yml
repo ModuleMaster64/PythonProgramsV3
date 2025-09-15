@@ -24,4 +24,4 @@ jobs:
     - name: Run Pycheck Agent (safe mode)
       run: |
         echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
-        python -m healing_agent run ./system/executingSystemCommands.py --no-fix
+        python -m healing_agent.agent run ./system/executingSystemCommands.py --no-fix
