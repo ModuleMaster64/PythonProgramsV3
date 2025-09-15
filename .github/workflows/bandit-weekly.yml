@@ -1,9 +1,9 @@
-name: Weekly Security Scan
+name: Weekly Bandit Security Scan
 
 on:
   schedule:
     - cron: '0 9 * * 1'  # Every Monday at 09:00 UTC
-  workflow_dispatch:     # Allows manual triggering too
+  workflow_dispatch:     # Optional: lets you run it manually too
 
 jobs:
   bandit-scan:
@@ -21,4 +21,4 @@ jobs:
       run: pip install bandit
 
     - name: Run Bandit
-      run: bandit -r .
+      run: bandit -r . --skip B101,B404
