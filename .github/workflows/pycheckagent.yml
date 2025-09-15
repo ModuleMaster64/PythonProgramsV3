@@ -18,8 +18,8 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install Pycheck Agent
-      run: pip install pycheck-agent
+    - name: Install Pycheck Agent from GitHub
+      run: pip install git+https://github.com/matebenyovszky/healing-agent.git
 
     - name: Run Pycheck Agent (safe mode)
       run: |
