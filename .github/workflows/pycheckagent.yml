@@ -25,5 +25,5 @@ jobs:
     - name: Run Pycheck Agent (safe mode)
       run: |
         echo "🧠 Running Pycheck Agent on executingSystemCommands.py..."
-        python healing-agent/agent.py run ./system/executingSystemCommands.py --no-fix
+        python healing-agent/scripts/agent.py run ./system/executingSystemCommands.py --no-fix
       working-directory: ${{ github.workspace }}
