@@ -1,7 +1,7 @@
 import time
 import random
 
-print("🍷 Welcome to the Chateau of Food")
+print("🍷 Welcome to the Chateau of Food!")
 print("It seems we are quite busy this evening...\n")
 
 # Input validation
@@ -12,11 +12,11 @@ while True:
     except ValueError:
         print("❌ That doesn't look like a number. Try again.")
 
-# Add suspense with time.sleep!
+# Add suspense.. with time.sleep!
 print("\n🕰️ The waiter eyes you carefully...")
 time.sleep(1.5)
 
-# Decision logic
+# Decisions Decisions...
 if money >= 50:
     print("💎 'Ah, Monsieur/Madame! Right this way to the VIP lounge.'")
     print("🪑 You are seated at a velvet booth with complimentary champagne.")
@@ -40,7 +40,7 @@ if money >= 20:
     dessert = random.choice(["Crème brûlée", "Chocolate soufflé", "Lemon tart"])
     print(f"\n🍰 As a surprise, the chef sends out a complimentary {dessert}.")
 
-print("\n🎭 Thank you for dining with us at the Chateau of Food.")
+print("\n🎭 Thank you for dining with us at the Chateau of Food! Please come again!")
 
 
      
