@@ -20,3 +20,10 @@ You can run this project directly in your browser using [Trinket.io](https://tri
 
 👉 [Click here to launch the code in Trinket](https://trinket.io/python3)
 
+<!-- STATS:START -->
+<!-- STATS:END -->
+
+<!-- UPDATED:START -->
+<!-- UPDATED:END -->
+
+
