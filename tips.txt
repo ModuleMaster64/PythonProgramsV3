@@ -1,0 +1,20 @@
+Use any() and all() to simplify complex condition checks across lists.
+Use set() to remove duplicates from a list quickly.
+Use sorted() with key= to sort custom objects or dictionaries.
+Use try/except blocks to handle errors gracefully and avoid crashes.
+Use f-strings for cleaner and faster string formatting: f"Hello, {name}!"
+Use type() and isinstance() to check variable types safely.
+Use map() and filter() for functional-style data transformations.
+Use *args and **kwargs to write flexible functions that accept any number of arguments.
+Use timeit module to benchmark performance of small code snippets.
+Use __name__ == "__main__" to make your scripts both importable and executable.
+Use os.path and pathlib for cross-platform file path handling.
+Use collections.Counter to count elements in a list efficiently.
+Use itertools for advanced looping patterns like combinations and permutations.
+Use enumerate() when you need both index and value in a loop.
+Use zip() to pair elements from multiple lists.
+Use defaultdict to avoid key errors when building dictionaries.
+Use contextlib.suppress() to ignore specific exceptions cleanly.
+Use dataclasses to create lightweight classes with less boilerplate.
+Use re (regular expressions) for powerful pattern matching in strings.
+Use logging instead of print() for better debugging and production diagnostics.
