@@ -23,6 +23,8 @@ You can run this project directly in your browser using Trinket.io
 
 ![Last Updated](https://img.shields.io/github/last-commit/ModuleMaster64/PythonProgramsV3?style=flat-square&color=brightgreen)
 
+If you have any questions/feedback feel free to leave a PR or issue and i will get back to you as soon as i can!
+
 <!-- STATS:START -->
 📄 Total lines of code: 1202
 🐍 Number of Python files: 42
