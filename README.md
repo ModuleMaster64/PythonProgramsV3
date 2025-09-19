@@ -16,9 +16,9 @@ This is the upgraded version of V2 (which is deleted) of PythonPrograms!
 ## Run any file on here if you dont have Python installed (like python 3.11 on windows or smth like that)
 
 If you don't have Python installed, no worries!  
-You can run this project directly in your browser using [Trinket.io](https://trinket.io/python3).
+You can run this project directly in your browser using Trinket.io
 
-👉 [Click here to launch the code in Trinket](https://trinket.io/python3)
+👉 [Click here to launch the code in Trinket!](https://trinket.io/python3)
 
 ![Last Updated](https://img.shields.io/github/last-commit/ModuleMaster64/PythonProgramsV3?style=flat-square&color=brightgreen)
 
