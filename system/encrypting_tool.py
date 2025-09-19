@@ -1,4 +1,3 @@
-import string
 import codecs
 import base64
 
