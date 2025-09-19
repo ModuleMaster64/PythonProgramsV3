@@ -20,11 +20,11 @@ jobs:
           const issueNumber = context.issue.number;
           const username = context.payload.issue.user.login;
           const comment = [
-            `👋 Hello @${username}, thanks for opening an issue!`,
+            `👋 Hello @${username}, thank you for opening an issue!`,
             ``,
-            `Before we dive in, check out our [README](https://github.com/ModuleMaster64/PythonProgramsV3#readme) and see if your question is covered.`,
+            `I will get back to you as soon as i can. - MM64`,
             ``,
-            `We appreciate your input — stay calm and collected! Have a great day`
+            `We appreciate your input — Have a great day!`
           ].join('\n');
 
           await github.rest.issues.createComment({
