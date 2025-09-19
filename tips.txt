@@ -1,3 +1,5 @@
+## Some helpful tips for python!
+
 Use any() and all() to simplify complex condition checks across lists.
 Use set() to remove duplicates from a list quickly.
 Use sorted() with key= to sort custom objects or dictionaries.
