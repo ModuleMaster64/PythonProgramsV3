@@ -12,3 +12,13 @@ This is the upgraded version of V2 (which is deleted) of PythonPrograms!
 
 - [ModuleMaster64](https://github.com/ModuleMaster64) — Creator & Maintainer  
 - [cclauss](https://github.com/cclauss) — Python wizardry & linting expertise
+
+## 🚀 Run This Project Without Installing Python
+
+If you don't have Python installed, no worries!  
+You can run this project directly in your browser using [Trinket.io](https://trinket.io/python3).
+
+👉 [Click here to launch the code in Trinket](https://trinket.io/python3)
+
+No setup required — just hit "Run" and start exploring!
+
