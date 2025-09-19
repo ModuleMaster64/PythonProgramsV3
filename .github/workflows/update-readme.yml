@@ -1,0 +1,38 @@
+name: 🧠 Update README Stats
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * *'  # Every day at midnight
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Count Python files and lines
+      run: |
+        PY_FILES=$(find . -name "*.py" | wc -l)
+        TOTAL_LINES=$(find . -name "*.py" -exec cat {} + | wc -l)
+        echo "PY_FILES=$PY_FILES" >> $GITHUB_ENV
+        echo "TOTAL_LINES=$TOTAL_LINES" >> $GITHUB_ENV
+
+    - name: Update README.md
+      run: |
+        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES"
+        DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
+
+        sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c\\<!-- STATS:START -->\n$STATS\n<!-- STATS:END -->" README.md
+        sed -i "/<!-- UPDATED:START -->/,/<!-- UPDATED:END -->/c\\<!-- UPDATED:START -->\n$DATE\n<!-- UPDATED:END -->" README.md
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add README.md
+        git commit -m "🧠 Update README stats"
+        git push
