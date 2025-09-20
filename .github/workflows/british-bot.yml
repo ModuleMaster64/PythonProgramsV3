@@ -41,8 +41,9 @@ jobs:
           git config user.name "British Banter Bot"
           git config user.email "banterbot@example.com"
 
-      - name: Fetch and Rebase
+      - name: Stage and Rebase
         run: |
+          git add .
           git fetch origin
           git rebase origin/main || echo "No changes to rebase"
 
