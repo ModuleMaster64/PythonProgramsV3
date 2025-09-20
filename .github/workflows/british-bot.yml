@@ -25,7 +25,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "British Banter Bot"
+          git config user.name "The British Banters Bot"
           git config user.email "banterbot@example.com"
 
       - name: Fetch and Rebase
@@ -43,7 +43,7 @@ jobs:
             month=$(date +%m)
             messages=(
               "fix: squashed that bug like a proper legend 💂🛠️🔥"
-              "feat: added a cheeky new feature, sorted innit 🧃✨💂"
+              "feat: added a cheeky new feature, sorted innit bruv 🧃✨💂"
               "chore: tidied up the config, all neat now 🔥🧃🧹"
               "docs: wrote it all down like a true gent 💂📚🧃"
               "refactor: cleaned up the mess, proper tidy 🔧💂🧃"
@@ -68,7 +68,7 @@ jobs:
               "chore: swept up the leftovers 🧹💂🧃"
               "docs: scribbled some wisdom 📜💂🧃"
               "chore: having a nice cuppa tea while sorting this out ☕💂🧃"
-              "fix: bit of a faff, but it’s sorted now innit 🔧💂🧃"
+              "fix: bit of a faff, but it’s sorted now innit m8 🔧💂🧃"
               "feat: added something proper fancy, Bob’s your uncle 💂🧃🎉"
             )
             # Add seasonal flavour
