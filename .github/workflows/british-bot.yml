@@ -39,9 +39,10 @@ jobs:
           git config user.name "British Banter Bot"
           git config user.email "banterbot@example.com"
 
-      - name: Pull latest changes
+      - name: Fetch and Rebase
         run: |
-          git pull --rebase origin main || echo "No changes to rebase"
+          git fetch orgin
+          git rebase origin/main || echo "No changes to rebase"
 
       - name: Commit and Push
         env:
