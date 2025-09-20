@@ -33,6 +33,10 @@ jobs:
           git config user.name "British Banter Bot"
           git config user.email "banterbot@example.com"
 
+      - name: Pull latest changes
+        run: |
+          git pull --rebase origin main || echo "No changes to rebase"
+
       - name: Commit and Push
         env:
           GH_TOKEN: ${{ secrets.GH_BANTER_TOKEN }}
