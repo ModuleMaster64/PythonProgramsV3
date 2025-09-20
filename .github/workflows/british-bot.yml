@@ -1,0 +1,42 @@
+name: British Banter Bot 🇬🇧
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  banter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install OpenCommit
+        run: npm install -g opencommit
+
+      - name: Generate Banter Message
+        run: |
+          export OPENCOMMIT_PROMPT="Write commit messages like a British developer. Use slang like 'innit', 'sorted', 'cheeky', 'proper', 'legend', etc."
+          opencommit --diff HEAD~1 HEAD > message.txt
+          echo "Generated message:"
+          cat message.txt
+
+      - name: Configure Git
+        run: |
+          git config user.name "British Banter Bot"
+          git config user.email "banterbot@example.com"
+
+      - name: Commit and Push
+        env:
+          GH_TOKEN: ${{ secrets.GH_BANTER_TOKEN }}
+        run: |
+          git add .
+          git commit -F message.txt || echo "No changes to commit"
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
