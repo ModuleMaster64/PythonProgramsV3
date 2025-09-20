@@ -4,8 +4,8 @@ fortune = 0
 replay = "y"
 
 
-print('Welcome to my fortune telling program!')
-replay =int('Do you want to have your fortune read? Enter y to play on or press enter to exit')
+print('Welcome to ModuleMaster64's fortune telling program!')
+replay =int('Do you want to have your fortune read? Enter y to play on or press enter to exit.')
 
 while replay == "y":
 
