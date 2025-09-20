@@ -1,0 +1,10 @@
+Applying migration 00_use_single_api_key_and_url
+Migration applied successfully 00_use_single_api_key_and_url
+Applying migration 01_remove_obsolete_config_keys_from_global_file
+Migration applied successfully 01_remove_obsolete_config_keys_from_global_file
+Applying migration 02_set_missing_default_values
+[]
+Migration applied successfully 02_set_missing_default_values
+[90m│[39m
+[90m└[39m  ✔ Migrations to your config were applied successfully. Please rerun.
+
