@@ -26,7 +26,7 @@ jobs:
           export OPENCOMMIT_PROMPT="Write commit messages like a British developer. Use slang like 'innit', 'sorted', 'cheeky', 'proper', 'legend', etc."
           opencommit --diff HEAD~1 HEAD > message.txt || echo "chore: did a bit of config tidying, innit" > message.txt
 
-          # Check if message.txt is empty or contains migration logs
+          # Check if message.txt is empty or lacks proper keywords
           if ! grep -Eiq 'feat|fix|chore|refactor|docs' message.txt; then
             echo "chore: did a bit of config tidying, innit" > message.txt
           fi
@@ -41,7 +41,7 @@ jobs:
 
       - name: Fetch and Rebase
         run: |
-          git fetch orgin
+          git fetch origin
           git rebase origin/main || echo "No changes to rebase"
 
       - name: Commit and Push
