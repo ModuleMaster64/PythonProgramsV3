@@ -25,7 +25,13 @@ jobs:
         run: |
           export OPENCOMMIT_PROMPT="Write commit messages like a British developer. Use slang like 'innit', 'sorted', 'cheeky', 'proper', 'legend', etc."
           opencommit --diff HEAD~1 HEAD > message.txt || echo "chore: did a bit of config tidying, innit" > message.txt
-          echo "Generated message:"
+
+          # Check if message.txt is empty or contains migration logs
+          if ! grep -Eiq 'feat|fix|chore|refactor|docs' message.txt; then
+            echo "chore: did a bit of config tidying, innit" > message.txt
+          fi
+
+          echo "Final commit message:"
           cat message.txt
 
       - name: Configure Git
