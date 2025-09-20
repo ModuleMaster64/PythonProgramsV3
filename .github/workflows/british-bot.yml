@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Ensures full history for rebase
+          fetch-depth: 0  # Full history for proper rebase
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -51,6 +51,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_BANTER_TOKEN }}
         run: |
-          git add .
           git commit -F message.txt || echo "No changes to commit"
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
