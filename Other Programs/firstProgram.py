@@ -1,8 +1,8 @@
-# My first program for python!
+# First Python program — sorted!
 
-# Subroutine to output this text
-def OutputText():
-    print("Python is awesome and easy to understand!")
+def output_text():
+    """Prints a cheeky message about Python."""
+    print("Python’s proper brilliant and easy to pick up, innit?")
 
-# Main program that is ran
-OutputText()
+if __name__ == "__main__":
+    output_text()
