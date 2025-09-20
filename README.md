@@ -1,6 +1,6 @@
 # PythonProgramsV3
 
-This is the upgraded version of V2 (which is deleted) of PythonPrograms!
+This is the upgraded version of V2 (which is deleted) of this PythonProgramsV3 project!
 
 ![Black](https://img.shields.io/badge/code%20style-black-000000.svg)
 ![Ruff](https://img.shields.io/badge/linter-ruff-purple)
