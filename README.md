@@ -7,6 +7,7 @@ This is the upgraded version of V2 (which is deleted) of PythonPrograms!
 ![Codespell](https://img.shields.io/badge/spellcheck-codespell-green)
 ![CI](https://github.com/ModuleMaster64/PythonProgramsV3/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.11+-brightgreen?logo=python&style=for-the-badge)
+[![British Banter Bot 🇬🇧](https://github.com/ModuleMaster64/PythonProgramsV3/actions/workflows/british-bot.yml/badge.svg)](https://github.com/ModuleMaster64/PythonProgramsV3/actions/workflows/british-bot.yml)
 
 ### 👥 Contributors for this Python Project
 
