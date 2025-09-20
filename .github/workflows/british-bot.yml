@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Full history for proper rebase
+          fetch-depth: 0  # Full history for rebase
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,6 +22,16 @@ jobs:
 
       - name: Install OpenCommit
         run: npm install -g opencommit
+
+      - name: Configure Git
+        run: |
+          git config user.name "British Banter Bot"
+          git config user.email "banterbot@example.com"
+
+      - name: Fetch and Rebase
+        run: |
+          git fetch origin
+          git rebase origin/main || echo "No changes to rebase"
 
       - name: Generate Banter Message
         run: |
@@ -36,20 +46,10 @@ jobs:
           echo "Final commit message:"
           cat message.txt
 
-      - name: Configure Git
-        run: |
-          git config user.name "British Banter Bot"
-          git config user.email "banterbot@example.com"
-
-      - name: Stage and Rebase
-        run: |
-          git add .
-          git fetch origin
-          git rebase origin/main || echo "No changes to rebase"
-
       - name: Commit and Push
         env:
           GH_TOKEN: ${{ secrets.GH_BANTER_TOKEN }}
         run: |
+          git add .
           git commit -F message.txt || echo "No changes to commit"
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
