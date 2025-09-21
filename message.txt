@@ -1,1 +1,1 @@
-feat: added something proper fancy, Bob’s your uncle 💂🧃🎉
+fix: sorted that edge case, no more drama 🧃💂🛠️
