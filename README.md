@@ -14,7 +14,8 @@ This is the upgraded version of V2 (which is deleted) of this PythonProgramsV3 p
 - [ModuleMaster64](https://github.com/ModuleMaster64) — Creator & Maintainer  
 - [cclauss](https://github.com/cclauss) — Python wizardry & linting expertise
 - [ActionsUser] - For updating the readme LOL
-- 
+- The British Banters Bot - for generating status messages (having a nice cuppa tea!)
+
 ## Run any file on here if you dont have Python installed (like python 3.11 on windows or smth like that)
 
 If you don't have Python installed, no worries!  
