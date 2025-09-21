@@ -13,8 +13,8 @@ This is the upgraded version of V2 (which is deleted) of this PythonProgramsV3 p
 
 - [ModuleMaster64](https://github.com/ModuleMaster64) — Creator & Maintainer  
 - [cclauss](https://github.com/cclauss) — Python wizardry & linting expertise
-- @actionsuser - For updating readme LOL
-
+- [ActionsUser] - For updating the readme LOL
+- 
 ## Run any file on here if you dont have Python installed (like python 3.11 on windows or smth like that)
 
 If you don't have Python installed, no worries!  
@@ -24,7 +24,7 @@ You can run this project directly in your browser using Trinket.io
 
 ![Last Updated](https://img.shields.io/github/last-commit/ModuleMaster64/PythonProgramsV3?style=flat-square&color=brightgreen)
 
-If you have any questions/feedback feel free to leave a PR or issue and i will get back to you as soon as i can!
+If you have any questions or feedback to give: feel free to leave a PR or issue and i will get back to you as soon as i can!
 
 <!-- STATS:START -->
 📄 Total lines of code: 1341
