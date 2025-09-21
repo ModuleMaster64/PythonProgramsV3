@@ -99,7 +99,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_BANTER_TOKEN }}
         run: |
           COMMIT_SHA=$(git rev-parse HEAD)
-          COMMENT="Nice one, mate — commit \`$COMMIT_SHA\` is looking proper tidy 💂🧃"
+          COMMENT="Nice one, mate — commit \`$COMMIT_SHA\` is looking clean now!"
           curl -s -X POST -H "Authorization: token $GH_TOKEN" \
             -H "Content-Type: application/json" \
             -d "{\"body\": \"$COMMENT\"}" \
