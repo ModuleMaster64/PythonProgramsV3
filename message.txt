@@ -1,1 +1,1 @@
-style: made it look snazzy, innit 🎨🧃💂
+chore: tidied up the config, all neat now 🔥🧃🧹
