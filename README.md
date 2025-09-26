@@ -11,7 +11,7 @@ This is the upgraded version of V2 (which is deleted) of this PythonProgramsV3 p
 
 ### 👥 Contributors for this Python Project
 
-- [ModuleMaster64](https://github.com/ModuleMaster64) — Creator & Maintainer  
+- [TheM1ddleM1n](https://github.com/TheM1ddleM1n) — Creator & Maintainer  
 - [cclauss](https://github.com/cclauss) — Python wizardry & linting expertise
 - [ActionsUser] - For updating the readme LOL
 - The British Banters Bot - for generating status messages (having a nice cuppa tea!)
@@ -23,7 +23,7 @@ You can run this project directly in your browser using Trinket.io
 
 👉 [Click here to launch the code in Trinket!](https://trinket.io/python3)
 
-![Last Updated](https://img.shields.io/github/last-commit/ModuleMaster64/PythonProgramsV3?style=flat-square&color=brightgreen)
+![Last Updated](https://img.shields.io/github/last-commit/TheM1ddleM1n/PythonProgramsV3?style=flat-square&color=brightgreen)
 
 If you have any questions or feedback to give: feel free to leave a PR or issue and i will get back to you as soon as i can!
 
