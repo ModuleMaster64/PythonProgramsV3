@@ -28,22 +28,60 @@ You can run this project directly in your browser using Trinket.io
 If you have any questions or feedback to give: feel free to leave a PR or issue and i will get back to you as soon as i can!
 
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:START -->
 📄 Total lines of code: 1342
 🐍 Number of Python files: 44
 
 🔢 Top contributors:
+
 <!-- STATS:END -->
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:START -->
+📄 Total lines of code: 1342
+🐍 Number of Python files: 44
+
+🔢 Top contributors:
 
 <!-- UPDATED:START -->
+🕒 Last updated: 2025-09-28 14:56 UTC
 <!-- UPDATED:START -->
-🕒 Last updated: 2025-09-28 14:54 UTC
+🕒 Last updated: 2025-09-28 14:56 UTC
 <!-- UPDATED:END -->
 <!-- UPDATED:START -->
+🕒 Last updated: 2025-09-28 14:56 UTC
 <!-- UPDATED:START -->
+🕒 Last updated: 2025-09-28 14:56 UTC
