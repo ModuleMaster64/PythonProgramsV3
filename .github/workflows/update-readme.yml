@@ -28,7 +28,7 @@ jobs:
         echo "$AUTHORS" >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
 
-    - name: Update README.md
+        - name: Update README.md
       run: |
         STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES\n\n🔢 Top contributors:\n$AUTHORS"
         DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
@@ -40,7 +40,7 @@ jobs:
           /<!-- UPDATED:START -->/ { print; print date; dateBlock=1; next }
           /<!-- UPDATED:END -->/ { print; dateBlock=0; next }
           statsBlock || dateBlock { next }
-          { print }
+          !statsBlock && !dateBlock { print }
         ' README.md > README.tmp && mv README.tmp README.md
 
     - name: Commit changes
