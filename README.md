@@ -30,8 +30,11 @@ If you have any questions or feedback to give: feel free to leave a PR or issue 
 <!-- STATS:START -->
 📄 Total lines of code: 1342
 🐍 Number of Python files: 44
+
+🔢 Top contributors:
+
 <!-- STATS:END -->
 
 <!-- UPDATED:START -->
-🕒 Last updated: 2025-09-28 14:09 UTC
+🕒 Last updated: 2025-09-28 14:48 UTC
 <!-- UPDATED:END -->
