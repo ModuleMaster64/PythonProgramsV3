@@ -21,16 +21,9 @@ jobs:
         echo "PY_FILES=$PY_FILES" >> $GITHUB_ENV
         echo "TOTAL_LINES=$TOTAL_LINES" >> $GITHUB_ENV
 
-    - name: Get commit counts by author
+    - name: Update README.md
       run: |
-        AUTHORS=$(git shortlog -sn | head -n 5 | awk '{print "👤 " $2 " " $1}' | paste -sd '\n')
-        echo "AUTHORS<<EOF" >> $GITHUB_ENV
-        echo "$AUTHORS" >> $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
-
-        - name: Update README.md
-      run: |
-        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES\n\n🔢 Top contributors:\n$AUTHORS"
+        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES"
         DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
 
         awk -v stats="$STATS" -v date="$DATE" '
@@ -40,7 +33,7 @@ jobs:
           /<!-- UPDATED:START -->/ { print; print date; dateBlock=1; next }
           /<!-- UPDATED:END -->/ { print; dateBlock=0; next }
           statsBlock || dateBlock { next }
-          !statsBlock && !dateBlock { print }
+          { print }
         ' README.md > README.tmp && mv README.tmp README.md
 
     - name: Commit changes
