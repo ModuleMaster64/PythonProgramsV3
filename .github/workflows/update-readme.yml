@@ -18,13 +18,10 @@ jobs:
       run: |
         PY_FILES=$(find . -name "*.py" | wc -l)
         TOTAL_LINES=$(find . -name "*.py" -exec cat {} + | wc -l)
-        echo "PY_FILES=$PY_FILES" >> $GITHUB_ENV
-        echo "TOTAL_LINES=$TOTAL_LINES" >> $GITHUB_ENV
-
-    - name: Update README.md
-      run: |
-        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES"
-        DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
+        echo "📄 Total lines of code: $TOTAL_LINES" > stats.txt
+        echo "🐍 Number of Python files: $PY_FILES" >> stats.txt
+        echo "🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")" >> stats.txt
+        cat stats.txt > README.md
 
     - name: Commit changes
       run: |
