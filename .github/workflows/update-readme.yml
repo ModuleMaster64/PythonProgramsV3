@@ -23,41 +23,23 @@ jobs:
 
     - name: Get commit counts by author
       run: |
-        git shortlog -sn | head -n 5 | awk '{print "👤 " $2 " " $1}' > authors.txt
+        AUTHORS=$(git shortlog -sn | head -n 5 | awk '{print "👤 " $2 " " $1}' | paste -sd '\n')
+        echo "AUTHORS<<EOF" >> $GITHUB_ENV
+        echo "$AUTHORS" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
 
     - name: Update README.md
       run: |
-        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES\n\n🔢 Top contributors:"
+        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES\n\n🔢 Top contributors:\n$AUTHORS"
         DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
 
-        {
-          echo "<!-- STATS:START -->"
-          echo -e "$STATS"
-          cat authors.txt
-          echo "<!-- STATS:END -->"
-        } > stats_block.txt
-
-        {
-          echo "<!-- UPDATED:START -->"
-          echo "$DATE"
-          echo "<!-- UPDATED:END -->"
-        } > updated_block.txt
-
-        awk '
-          BEGIN { stats=0; updated=0 }
-          /<!-- STATS:START -->/ { print; stats=1; next }
-          /<!-- STATS:END -->/ {
-            while ((getline line < "stats_block.txt") > 0) print line
-            stats=0
-            next
-          }
-          /<!-- UPDATED:START -->/ { print; updated=1; next }
-          /<!-- UPDATED:END -->/ {
-            while ((getline line < "updated_block.txt") > 0) print line
-            updated=0
-            next
-          }
-          stats || updated { next }
+        awk -v stats="$STATS" -v date="$DATE" '
+          BEGIN { statsBlock=0; dateBlock=0 }
+          /<!-- STATS:START -->/ { print; print stats; statsBlock=1; next }
+          /<!-- STATS:END -->/ { print; statsBlock=0; next }
+          /<!-- UPDATED:START -->/ { print; print date; dateBlock=1; next }
+          /<!-- UPDATED:END -->/ { print; dateBlock=0; next }
+          statsBlock || dateBlock { next }
           { print }
         ' README.md > README.tmp && mv README.tmp README.md
 
