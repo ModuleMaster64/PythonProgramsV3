@@ -1,1 +1,1 @@
-chore: tidied up the config, all neat now 🔥🧃🧹
+fix: sorted that edge case, no more drama 🧃💂🛠️
