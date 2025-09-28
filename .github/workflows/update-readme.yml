@@ -18,16 +18,21 @@ jobs:
       run: |
         PY_FILES=$(find . -name "*.py" | wc -l)
         TOTAL_LINES=$(find . -name "*.py" -exec cat {} + | wc -l)
-        echo "📄 Total lines of code: $TOTAL_LINES" > stats.txt
-        echo "🐍 Number of Python files: $PY_FILES" >> stats.txt
-        echo "🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")" >> stats.txt
-        cat stats.txt > README.md
+        echo "PY_FILES=$PY_FILES" >> $GITHUB_ENV
+        echo "TOTAL_LINES=$TOTAL_LINES" >> $GITHUB_ENV
+
+    - name: Update README.md
+      run: |
+        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES"
+        DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
+
+        sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c\\<!-- STATS:START -->\n$STATS\n<!-- STATS:END -->" README.md
+        sed -i "/<!-- UPDATED:START -->/,/<!-- UPDATED:END -->/c\\<!-- UPDATED:START -->\n$DATE\n<!-- UPDATED:END -->" README.md
 
     - name: Commit changes
       run: |
         git config --global user.name "GitHub Actions Bot"
         git config --global user.email "actions@github.com"
         git add README.md
-        TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-        git commit --allow-empty -m "🧠 Update README stats [$TIMESTAMP]"
+        git commit -m "🧠 Update README stats"
         git push
