@@ -26,16 +26,6 @@ jobs:
         STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES"
         DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
 
-        awk -v stats="$STATS" -v date="$DATE" '
-          BEGIN { statsBlock=0; dateBlock=0 }
-          /<!-- STATS:START -->/ { print; print stats; statsBlock=1; next }
-          /<!-- STATS:END -->/ { print; statsBlock=0; next }
-          /<!-- UPDATED:START -->/ { print; print date; dateBlock=1; next }
-          /<!-- UPDATED:END -->/ { print; dateBlock=0; next }
-          statsBlock || dateBlock { next }
-          { print }
-        ' README.md > README.tmp && mv README.tmp README.md
-
     - name: Commit changes
       run: |
         git config --global user.name "GitHub Actions Bot"
