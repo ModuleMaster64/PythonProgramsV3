@@ -24,17 +24,34 @@ jobs:
     - name: Get commit counts by author
       run: |
         git shortlog -sn | head -n 5 | awk '{print "👤 " $2 " " $1}' > authors.txt
-        echo "TOP_AUTHORS<<EOF" >> $GITHUB_ENV
-        cat authors.txt >> $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
 
     - name: Update README.md
       run: |
-        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES\n\n🔢 Top contributors:\n$TOP_AUTHORS"
+        STATS="📄 Total lines of code: $TOTAL_LINES\n🐍 Number of Python files: $PY_FILES\n\n🔢 Top contributors:"
         DATE="🕒 Last updated: $(date -u +"%Y-%m-%d %H:%M UTC")"
 
-        sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c\\<!-- STATS:START -->\n$STATS\n<!-- STATS:END -->" README.md
-        sed -i "/<!-- UPDATED:START -->/,/<!-- UPDATED:END -->/c\\<!-- UPDATED:START -->\n$DATE\n<!-- UPDATED:END -->" README.md
+        {
+          echo "<!-- STATS:START -->"
+          echo -e "$STATS"
+          cat authors.txt
+          echo "<!-- STATS:END -->"
+        } > stats_block.txt
+
+        {
+          echo "<!-- UPDATED:START -->"
+          echo "$DATE"
+          echo "<!-- UPDATED:END -->"
+        } > updated_block.txt
+
+        sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/{
+          r stats_block.txt
+          d
+        }" README.md
+
+        sed -i "/<!-- UPDATED:START -->/,/<!-- UPDATED:END -->/{
+          r updated_block.txt
+          d
+        }" README.md
 
     - name: Commit changes
       run: |
