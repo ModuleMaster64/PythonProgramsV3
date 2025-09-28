@@ -1,1 +1,1 @@
-refactor: made it less of a mess, proper now 🧃💂🧼
+docs: added a cheeky diagram 📊💂🧃
