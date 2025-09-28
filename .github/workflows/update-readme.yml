@@ -43,15 +43,23 @@ jobs:
           echo "<!-- UPDATED:END -->"
         } > updated_block.txt
 
-        sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/{
-          r stats_block.txt
-          d
-        }" README.md
-
-        sed -i "/<!-- UPDATED:START -->/,/<!-- UPDATED:END -->/{
-          r updated_block.txt
-          d
-        }" README.md
+        awk '
+          BEGIN { stats=0; updated=0 }
+          /<!-- STATS:START -->/ { print; stats=1; next }
+          /<!-- STATS:END -->/ {
+            while ((getline line < "stats_block.txt") > 0) print line
+            stats=0
+            next
+          }
+          /<!-- UPDATED:START -->/ { print; updated=1; next }
+          /<!-- UPDATED:END -->/ {
+            while ((getline line < "updated_block.txt") > 0) print line
+            updated=0
+            next
+          }
+          stats || updated { next }
+          { print }
+        ' README.md > README.tmp && mv README.tmp README.md
 
     - name: Commit changes
       run: |
