@@ -1,4 +1,4 @@
-# First Python program — sorted!
+# First Python program — sorted bruv
 
 def output_text():
     """Prints a cheeky message about Python."""
