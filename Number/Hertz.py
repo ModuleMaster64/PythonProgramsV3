@@ -2,8 +2,8 @@ def Sample(Hz):
     if Hz == 44100:
         print("CD Quality")
     if Hz < 44100:
-        print("Low quality")
+        print("Low Quality")
     if Hz > 44100:
-        print("Compress")
+        print("Compressed Quality")
 
 Sample(48000)
