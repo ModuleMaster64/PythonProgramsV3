@@ -54,7 +54,7 @@ jobs:
               "chore: did a bit of spring cleaning 🧹💂✨"
               "docs: added some words, made it readable 📖💂🧃"
               "refactor: shuffled things around, proper elegant 🔄💂🧃"
-              "style: polished it up, now it’s gleaming ✨💂🧃"
+              "style: polished it up, now it's gleaming ✨💂🧃"
               "test: ran the tests, smashed it ✅🔥💂"
               "fix: sorted that edge case, no more drama 🧃💂🛠️"
               "feat: built something brilliant, innit 💡💂🧃"
@@ -68,8 +68,8 @@ jobs:
               "chore: swept up the leftovers 🧹💂🧃"
               "docs: scribbled some wisdom 📜💂🧃"
               "chore: having a nice cuppa tea while sorting this out ☕💂🧃"
-              "fix: bit of a faff, but it’s sorted now innit m8 🔧💂🧃"
-              "feat: added something proper fancy, Bob’s your uncle 💂🧃🎉"
+              "fix: bit of a faff, but it's sorted now innit m8 🔧💂🧃"
+              "feat: added something proper fancy, Bob's your uncle 💂🧃🎉"
             )
             # Add seasonal flavour
             if [ "$month" == "10" ]; then
@@ -90,8 +90,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_BANTER_TOKEN }}
         run: |
+          # Remove message.txt from staging if it exists
+          git reset HEAD message.txt 2>/dev/null || true
+          
           git add .
           git commit -F message.txt || echo "No changes to commit"
+          
+          # Delete message.txt after committing (so it's not tracked)
+          rm -f message.txt
+          
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
 
       - name: Drop a Cheeky Comment
