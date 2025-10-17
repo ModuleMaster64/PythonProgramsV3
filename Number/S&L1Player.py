@@ -3,7 +3,7 @@ import random
 
 current_square = 0
 print('Welcome to the Snakes and Ladders The GAME!')
-print('You must reach sqaure 100 to win this game.')
+print('You must reach square 100 to win this game.')
 
 while current_square < 101:
     print('Roll the dice by pressing enter.')
