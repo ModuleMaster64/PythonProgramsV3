@@ -9,9 +9,9 @@ This is the upgraded version of V2 (which is deleted) of this PythonProgramsV3 p
 ![Python](https://img.shields.io/badge/python-3.11+-brightgreen?logo=python&style=for-the-badge)
 [![British Banter Bot 🇬🇧](https://github.com/ModuleMaster64/PythonProgramsV3/actions/workflows/british-bot.yml/badge.svg)](https://github.com/ModuleMaster64/PythonProgramsV3/actions/workflows/british-bot.yml)
 
-### 👥 Contributors for this Python Project
+### 👥 Contributors
 
-- [TheM1ddleM1n](https://github.com/TheM1ddleM1n) — Creator & Maintainer of `PythonProgramsV3`  
+- [TheM1ddleM1n](https://github.com/TheM1ddleM1n) — Creator & Maintainer of `PythonProgramsV3`
 - [cclauss](https://github.com/cclauss) — Python wizardry & linting expertise
 - [ActionsUser] - For updating the `readme` LOL
 - The British Banters Bot - for generating `status messages` (to store in message.txt) (alright)
