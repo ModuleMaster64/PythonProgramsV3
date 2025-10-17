@@ -1,10 +1,10 @@
 import re
 
 def is_valid_name(name):
-    # Will only allow letters, spaces, hyphens, and apostrophes
+    # This will only allow letters, spaces, hyphens, and apostrophes
     return re.fullmatch(r"[A-Za-z\s\-']+", name) is not None
 
-# 👤 Collect and validate the users input
+# 👤 Collects and validates the users input!
 surname = input("Enter your surname: ")
 forename = input("Enter your forename: ")
 
