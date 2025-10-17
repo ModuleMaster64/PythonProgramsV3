@@ -18,8 +18,8 @@ This is the upgraded version of V2 (which is deleted) of this PythonProgramsV3 p
 
 ## Run any file on here if you dont have Python installed (like python 3.11/3.12/(3.13.9 IS THE LATEST VERSION OF PYTHON))
 
-If you don't have Python installed, no worries!  
-You can run this project directly in your browser using Trinket.io
+- If you don't have Python installed, no worries!  
+- You can run these projects directly in your browser via the website called `trinket.io`
 
 👉 [Click here to launch the code in Trinket!](https://trinket.io/python3)
 
