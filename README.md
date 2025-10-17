@@ -28,10 +28,10 @@ You can run this project directly in your browser using Trinket.io
 If you have any questions or feedback to give: feel free to leave a PR or issue and i will get back to you as soon as i can!
 
 <!-- STATS:START -->
-📄 Total lines of code: 1461
+📄 Total lines of code: 1468
 🐍 Number of Python files: 46
 <!-- STATS:END -->
 
 <!-- UPDATED:START -->
-🕒 Last updated: 2025-10-17 20:31 UTC
+🕒 Last updated: 2025-10-17 20:33 UTC
 <!-- UPDATED:END -->
