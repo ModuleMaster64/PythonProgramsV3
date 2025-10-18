@@ -6,16 +6,26 @@ mood_music = {
         "Walking on Sunshine – Katrina & The Waves",
         "Can't Stop the Feeling – Justin Timberlake",
         "Electric Feel – MGMT"
+        "Dancing Queen - ABBA"
+        "24K Magic - Bruno Mars"
+        "APT. - Rosé + Bruno Mars"
+        "Don't Stop Me Now - Queen"
     ],
     "sad": [
         "Someone Like You – Adele",
         "Fix You – Coldplay",
         "The Night We Met – Lord Huron"
+        "i dont wanna break - Christina Perri"
+        "Man Thats Never Known You - Zach Bryan"
+        "Everglow - Coldplay"
+        "Teddy Bear - Melanie Martinez"
+        "When I Was Your Man - Bruno Mars"
     ],
     "angry": [
         "Killing In the Name – Rage Against The Machine",
         "DNA – Kendrick Lamar",
         "Smells Like Teen Spirit – Nirvana"
+        "Damaged - Black Flag"
     ],
     "chill": [
         "Weightless – Marconi Union",
@@ -44,7 +54,7 @@ def suggest_song(mood):
 
 def main():
     print("Welcome to MoodMusicSuggester!")
-    mood = input("What's your current mood? ")
+    mood = input("What is your current mood right now? ")
     suggest_song(mood)
 
 if __name__ == "__main__":
