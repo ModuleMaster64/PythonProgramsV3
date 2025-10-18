@@ -1,1 +1,1 @@
-docs: added some words, made it readable 📖💂🧃
+test: ran the tests, smashed it ✅🔥💂
