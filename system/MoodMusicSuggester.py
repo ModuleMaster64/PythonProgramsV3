@@ -16,7 +16,7 @@ mood_music = {
         "Fix You – Coldplay",
         "The Night We Met – Lord Huron"
         "i dont wanna break - Christina Perri"
-        "Man Thats Never Known You - Zach Bryan"
+        "Man That's Never Known You - Zach Bryan"
         "Everglow - Coldplay"
         "Teddy Bear - Melanie Martinez"
         "When I Was Your Man - Bruno Mars"
